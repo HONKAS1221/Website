@@ -44,7 +44,32 @@ namespace Website
 
         private void label3_Click(object sender, EventArgs e)
         {
+           
+                ShowScreen(new UCcheckout());
+        }
 
+         // This can be reused for showing any UserControl
+        private void ShowScreen(UserControl newScreen)
+        {
+            // Find existing controls and dispose them to free memory
+            foreach (Control ctrl in pnlContent.Controls)
+            {
+                ctrl.Dispose();
+            }
+
+            pnlContent.Controls.Clear(); // Clear the controls
+            newScreen.Dock = DockStyle.Fill; // Set Dock to Fill
+            pnlContent.Controls.Add(newScreen); // Add the UC to Pnl
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bpcheckout_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UCcheckout());
         }
     }
 }

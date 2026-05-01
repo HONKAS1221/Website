@@ -66,11 +66,11 @@
     <Compile Include="Us.Designer.cs">
       <DependentUpon>Us.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="UCproduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="UCproduct.Designer.cs">
+      <DependentUpon>UCproduct.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="UCcheckout.resx">
       <DependentUpon>UCcheckout.cs</DependentUpon>
@@ -87,11 +87,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UCproduct.resx">
+      <DependentUpon>UCproduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Us.resx">
       <DependentUpon>Us.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

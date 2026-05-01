@@ -46,6 +46,7 @@ namespace Website
         {
            
                 ShowScreen(new UCcheckout());
+                ShowScreen(new UCproduct());
         }
 
          // This can be reused for showing any UserControl
@@ -70,6 +71,11 @@ namespace Website
         private void bpcheckout_Click(object sender, EventArgs e)
         {
             ShowScreen(new UCcheckout());
+        }
+
+        private void Bproducts_Click(object sender, EventArgs e)
+        {
+            ShowScreen(new UCproduct());
         }
     }
 }

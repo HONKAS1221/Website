@@ -34,12 +34,14 @@
             this.Bhome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.Order = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panel1.Controls.Add(this.Order);
             this.panel1.Controls.Add(this.bpcheckout);
             this.panel1.Controls.Add(this.Bproducts);
             this.panel1.Controls.Add(this.Bhome);
@@ -52,7 +54,7 @@
             // 
             // bpcheckout
             // 
-            this.bpcheckout.Location = new System.Drawing.Point(11, 278);
+            this.bpcheckout.Location = new System.Drawing.Point(11, 241);
             this.bpcheckout.Name = "bpcheckout";
             this.bpcheckout.Size = new System.Drawing.Size(110, 75);
             this.bpcheckout.TabIndex = 4;
@@ -96,6 +98,16 @@
             this.pnlContent.Size = new System.Drawing.Size(732, 534);
             this.pnlContent.TabIndex = 1;
             // 
+            // Order
+            // 
+            this.Order.Location = new System.Drawing.Point(11, 366);
+            this.Order.Name = "Order";
+            this.Order.Size = new System.Drawing.Size(110, 72);
+            this.Order.TabIndex = 5;
+            this.Order.Text = "Order";
+            this.Order.UseVisualStyleBackColor = true;
+            this.Order.Click += new System.EventHandler(this.Order_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,6 +132,7 @@
         private System.Windows.Forms.Button Bproducts;
         private System.Windows.Forms.Button Bhome;
         private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.Button Order;
     }
 }
 

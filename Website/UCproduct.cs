@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Website
 {
     public partial class UCproduct : UserControl
     {
+        private BindingList<Product> _inventoryList = new BindingList<Product>();
+        private BindingSource _bindingSource = new BindingSource();
+
+        string filePath = ".\\anything.csv";
         public UCproduct()
         {
             InitializeComponent();
@@ -29,10 +34,74 @@ namespace Website
 
         private void button1_Click(object sender, EventArgs e)
         {
+            {
+                // 1. Validation
+                if (!ValidateInputs()) return;
 
+                // 2. Get textbox inputs and create the new product 
+                int newId = _inventoryList.Count + 1000;
+                string name = LB1.Text;
+                string brand = LB2.Text;
+                decimal price = decimal.Parse(LB4.Text);
+                int quantity = int.Parse(LB3.Text);
+
+                // Use the Constructor to create a new intance of Product
+                Product newProduct = new Product(newId, name, brand, price, quantity);
+                _inventoryList.Add(newProduct);
+
+                // 4. Refresh the grid to show the new item
+                _bindingSource.ResetBindings(false);
+
+                // 5. Clear fields for the next entry
+                ClearFields();
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+        private bool ValidateInputs()
+        {
+            // Check if Name contains invalid special characters like #, $, @
+            // This regex allows only letters, numbers, and spaces
+            if (!Regex.IsMatch(LB1.Text, @"^[a-zA-Z0-9 ]+$"))
+            {
+                MessageBox.Show("Product Name contains invalid characters.");
+                return false;
+            }
+
+            // Check if Price is a positive decimal
+            if (!decimal.TryParse(LB4.Text, out decimal price) || price < 0)
+            {
+                MessageBox.Show("Please enter a valid positive price.");
+                return false;
+            }
+
+            // Check if Quantity is a positive integer
+            if (!int.TryParse(LB3.Text, out int qty) || qty < 0)
+            {
+                MessageBox.Show("Please enter a valid positive quantity.");
+                return false;
+            }
+
+            return true;
+        }
+        private void ClearFields()
+        {
+            LB1.Clear();
+            LB1.Clear();
+            LB2.Clear();
+            LB4.Clear();
+            LB3.Clear();
+        }
+
+        private void txtName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -144,6 +144,7 @@
     <EmbeddedResource Include="Us.resx">
       <DependentUpon>Us.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="anything.csv" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

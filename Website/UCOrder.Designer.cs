@@ -47,6 +47,7 @@
             this.Add_to_Order.TabIndex = 7;
             this.Add_to_Order.Text = "Add to Order";
             this.Add_to_Order.UseVisualStyleBackColor = true;
+            this.Add_to_Order.Click += new System.EventHandler(this.Add_to_Order_Click);
             // 
             // dataGridView1
             // 

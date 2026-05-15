@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 
-namespace Website
+    namespace Website
 {
     public partial class UCproduct : UserControl
     {
@@ -41,7 +41,7 @@ namespace Website
                 // 2. Get textbox inputs and create the new product 
                 int newId = _inventoryList.Count + 1000;
                 string name = LB1.Text;
-                string brand = LB2.Text;
+                string brand = HJGFC.Text;
                 decimal price = decimal.Parse(LB4.Text);
                 int quantity = int.Parse(LB3.Text);
 
@@ -91,7 +91,7 @@ namespace Website
         {
             LB1.Clear();
             LB1.Clear();
-            LB2.Clear();
+            //HJGFC.Clear();
             LB4.Clear();
             LB3.Clear();
         }
@@ -102,6 +102,16 @@ namespace Website
         }
 
         private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged_1(object sender, EventArgs e)
         {
 
         }

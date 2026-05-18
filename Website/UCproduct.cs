@@ -95,27 +95,6 @@ using System.Text.RegularExpressions;
             txtPrice.Clear();
             txtBrand.Clear();
         }
-
-        private void txtName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void UCproduct_Load(object sender, EventArgs e)
         {
             //this pulls it for file path, then puts in temp list

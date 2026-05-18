@@ -49,20 +49,25 @@
             this.ADD = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.fds = new System.Windows.Forms.GroupBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.Save = new System.Windows.Forms.Button();
+            this.Update = new System.Windows.Forms.Button();
+            this.dvgInventory = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.tex = new System.Windows.Forms.Label();
             this.HJGFC = new System.Windows.Forms.Label();
-            this.LB4 = new System.Windows.Forms.TextBox();
-            this.LB3 = new System.Windows.Forms.TextBox();
-            this.LB2 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtBrand = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.dvgInventory = new System.Windows.Forms.DataGridView();
-            this.Update = new System.Windows.Forms.Button();
-            this.Save = new System.Windows.Forms.Button();
+            this.txtdelete = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.fds.SuspendLayout();
@@ -240,36 +245,74 @@
             // 
             // fds
             // 
+            this.fds.Controls.Add(this.label7);
+            this.fds.Controls.Add(this.label6);
+            this.fds.Controls.Add(this.txtdelete);
+            this.fds.Controls.Add(this.txtQuantity);
             this.fds.Controls.Add(this.Save);
             this.fds.Controls.Add(this.Update);
             this.fds.Controls.Add(this.dvgInventory);
             this.fds.Controls.Add(this.label9);
             this.fds.Controls.Add(this.label8);
-            this.fds.Controls.Add(this.label7);
+            this.fds.Controls.Add(this.tex);
             this.fds.Controls.Add(this.HJGFC);
-            this.fds.Controls.Add(this.LB4);
-            this.fds.Controls.Add(this.LB3);
-            this.fds.Controls.Add(this.LB2);
+            this.fds.Controls.Add(this.txtPrice);
+            this.fds.Controls.Add(this.txtBrand);
+            this.fds.Controls.Add(this.txtName);
             this.fds.Controls.Add(this.txtID);
             this.fds.Controls.Add(this.button1);
             this.fds.Controls.Add(this.button2);
             this.fds.Location = new System.Drawing.Point(13, 19);
             this.fds.Name = "fds";
-            this.fds.Size = new System.Drawing.Size(925, 531);
+            this.fds.Size = new System.Drawing.Size(1185, 620);
             this.fds.TabIndex = 1;
             this.fds.TabStop = false;
             this.fds.Text = "groupBox1";
             this.fds.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Location = new System.Drawing.Point(82, 420);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(100, 20);
+            this.txtQuantity.TabIndex = 21;
+            // 
+            // Save
+            // 
+            this.Save.Location = new System.Drawing.Point(21, 446);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(237, 62);
+            this.Save.TabIndex = 20;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = true;
+            // 
+            // Update
+            // 
+            this.Update.Location = new System.Drawing.Point(21, 106);
+            this.Update.Name = "Update";
+            this.Update.Size = new System.Drawing.Size(237, 62);
+            this.Update.TabIndex = 19;
+            this.Update.Text = "Update";
+            this.Update.UseVisualStyleBackColor = true;
+            this.Update.Click += new System.EventHandler(this.Update_Click);
+            // 
+            // dvgInventory
+            // 
+            this.dvgInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgInventory.Location = new System.Drawing.Point(296, 19);
+            this.dvgInventory.Name = "dvgInventory";
+            this.dvgInventory.Size = new System.Drawing.Size(869, 595);
+            this.dvgInventory.TabIndex = 18;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 409);
+            this.label9.Location = new System.Drawing.Point(21, 398);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.Size = new System.Drawing.Size(31, 13);
             this.label9.TabIndex = 17;
-            this.label9.Text = "label9";
+            this.label9.Text = "Price";
             // 
             // label8
             // 
@@ -279,17 +322,17 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 13);
             this.label8.TabIndex = 16;
-            this.label8.Text = "label8";
+            this.label8.Text = "Brand";
             // 
-            // label7
+            // tex
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 313);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "label7";
+            this.tex.AutoSize = true;
+            this.tex.Location = new System.Drawing.Point(21, 313);
+            this.tex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.tex.Name = "tex";
+            this.tex.Size = new System.Drawing.Size(35, 13);
+            this.tex.TabIndex = 15;
+            this.tex.Text = "Name";
             // 
             // HJGFC
             // 
@@ -302,27 +345,27 @@
             this.HJGFC.Text = "ID";
             this.HJGFC.Click += new System.EventHandler(this.label6_Click);
             // 
-            // LB4
+            // txtPrice
             // 
-            this.LB4.Location = new System.Drawing.Point(82, 400);
-            this.LB4.Name = "LB4";
-            this.LB4.Size = new System.Drawing.Size(100, 20);
-            this.LB4.TabIndex = 13;
+            this.txtPrice.Location = new System.Drawing.Point(82, 391);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 13;
             // 
-            // LB3
+            // txtBrand
             // 
-            this.LB3.Location = new System.Drawing.Point(82, 354);
-            this.LB3.Name = "LB3";
-            this.LB3.Size = new System.Drawing.Size(100, 20);
-            this.LB3.TabIndex = 11;
+            this.txtBrand.Location = new System.Drawing.Point(82, 354);
+            this.txtBrand.Name = "txtBrand";
+            this.txtBrand.Size = new System.Drawing.Size(100, 20);
+            this.txtBrand.TabIndex = 11;
             // 
-            // LB2
+            // txtName
             // 
-            this.LB2.Location = new System.Drawing.Point(82, 313);
-            this.LB2.Name = "LB2";
-            this.LB2.Size = new System.Drawing.Size(100, 20);
-            this.LB2.TabIndex = 9;
-            this.LB2.TextChanged += new System.EventHandler(this.textBox7_TextChanged_1);
+            this.txtName.Location = new System.Drawing.Point(82, 313);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 9;
+            this.txtName.TextChanged += new System.EventHandler(this.textBox7_TextChanged_1);
             // 
             // txtID
             // 
@@ -360,32 +403,35 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "label5";
             // 
-            // dvgInventory
+            // txtdelete
             // 
-            this.dvgInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgInventory.Location = new System.Drawing.Point(296, 38);
-            this.dvgInventory.Name = "dvgInventory";
-            this.dvgInventory.Size = new System.Drawing.Size(606, 470);
-            this.dvgInventory.TabIndex = 18;
+            this.txtdelete.Location = new System.Drawing.Point(82, 250);
+            this.txtdelete.Name = "txtdelete";
+            this.txtdelete.Size = new System.Drawing.Size(100, 20);
+            this.txtdelete.TabIndex = 22;
             // 
-            // Update
+            // contextMenuStrip2
             // 
-            this.Update.Location = new System.Drawing.Point(21, 106);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(237, 62);
-            this.Update.TabIndex = 19;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = true;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // Save
+            // label6
             // 
-            this.Save.Location = new System.Drawing.Point(21, 446);
-            this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(237, 62);
-            this.Save.TabIndex = 20;
-            this.Save.Text = "Save";
-            this.Save.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 427);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Quantity";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 256);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 24;
+            this.label7.Text = "label7";
             // 
             // UCproduct
             // 
@@ -395,7 +441,7 @@
             this.Controls.Add(this.fds);
             this.Controls.Add(this.groupBox1);
             this.Name = "UCproduct";
-            this.Size = new System.Drawing.Size(941, 564);
+            this.Size = new System.Drawing.Size(1201, 642);
             this.Load += new System.EventHandler(this.UCproduct_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -430,19 +476,24 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.GroupBox fds;
-        private System.Windows.Forms.TextBox LB4;
-        private System.Windows.Forms.TextBox LB3;
-        private System.Windows.Forms.TextBox LB2;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtBrand;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label tex;
         private System.Windows.Forms.Label HJGFC;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.DataGridView dvgInventory;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.TextBox txtQuantity;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtdelete;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
     }
 }

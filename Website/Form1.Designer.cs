@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Order = new System.Windows.Forms.Button();
             this.bpcheckout = new System.Windows.Forms.Button();
             this.Bproducts = new System.Windows.Forms.Button();
             this.Bhome = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
-            this.Order = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +49,18 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(134, 534);
+            this.panel1.Size = new System.Drawing.Size(134, 591);
             this.panel1.TabIndex = 0;
+            // 
+            // Order
+            // 
+            this.Order.Location = new System.Drawing.Point(11, 366);
+            this.Order.Name = "Order";
+            this.Order.Size = new System.Drawing.Size(110, 72);
+            this.Order.TabIndex = 5;
+            this.Order.Text = "Order";
+            this.Order.UseVisualStyleBackColor = true;
+            this.Order.Click += new System.EventHandler(this.Order_Click);
             // 
             // bpcheckout
             // 
@@ -93,27 +103,17 @@
             // 
             this.pnlContent.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlContent.Location = new System.Drawing.Point(152, 0);
+            this.pnlContent.Location = new System.Drawing.Point(140, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(732, 534);
+            this.pnlContent.Size = new System.Drawing.Size(991, 591);
             this.pnlContent.TabIndex = 1;
-            // 
-            // Order
-            // 
-            this.Order.Location = new System.Drawing.Point(11, 366);
-            this.Order.Name = "Order";
-            this.Order.Size = new System.Drawing.Size(110, 72);
-            this.Order.TabIndex = 5;
-            this.Order.Text = "Order";
-            this.Order.UseVisualStyleBackColor = true;
-            this.Order.Click += new System.EventHandler(this.Order_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(884, 534);
+            this.ClientSize = new System.Drawing.Size(1131, 591);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlContent);
             this.Name = "Form1";

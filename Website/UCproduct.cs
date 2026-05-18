@@ -16,7 +16,7 @@ using System.Text.RegularExpressions;
         private BindingList<Product> _inventoryList = new BindingList<Product>();
         private BindingSource _bindingSource = new BindingSource();
 
-        string filePath = ".\\anything.csv";
+        string filePath = "./anything.csv";
         public UCproduct()
         {
             InitializeComponent();
@@ -42,8 +42,8 @@ using System.Text.RegularExpressions;
                 int newId = _inventoryList.Count + 1000;
                 string name = txtID.Text;
                 string brand = HJGFC.Text;
-                decimal price = decimal.Parse(LB4.Text);
-                int quantity = int.Parse(LB3.Text);
+                decimal price = decimal.Parse(txtPrice.Text);
+                int quantity = int.Parse(txtBrand.Text);
 
                 // Use the Constructor to create a new intance of Product
                 Product newProduct = new Product(newId, name, brand, price, quantity);
@@ -72,14 +72,14 @@ using System.Text.RegularExpressions;
             }
 
             // Check if Price is a positive decimal
-            if (!decimal.TryParse(LB4.Text, out decimal price) || price < 0)
+            if (!decimal.TryParse(txtPrice.Text, out decimal price) || price < 0)
             {
                 MessageBox.Show("Please enter a valid positive price.");
                 return false;
             }
 
             // Check if Quantity is a positive integer
-            if (!int.TryParse(LB3.Text, out int qty) || qty < 0)
+            if (!int.TryParse(txtBrand.Text, out int qty) || qty < 0)
             {
                 MessageBox.Show("Please enter a valid positive quantity.");
                 return false;
@@ -92,8 +92,8 @@ using System.Text.RegularExpressions;
             txtID.Clear();
             txtID.Clear();
             //HJGFC.Clear();
-            LB4.Clear();
-            LB3.Clear();
+            txtPrice.Clear();
+            txtBrand.Clear();
         }
 
         private void txtName_Click(object sender, EventArgs e)
@@ -145,10 +145,26 @@ using System.Text.RegularExpressions;
             if (productToUpdate != null) //this mean not equal to null
             {
                 // Update the object properties (EX)
-                if (ValidateInputs())
-                { 
-                productToUpdate
+                if (ValidateInputs()) // Updates the object properties (No ID so it stays the same)
+                {
+                    productToUpdate.ProductName = txtName.Text;
+                    productToUpdate.ProductBrand = txtBrand.Text;
+                    productToUpdate.ProductPrice = decimal.Parse(txtPrice.Text);
+                    productToUpdate.ProductQuantity = int.Parse(txtQuantity.Text);
+
+                    //refresh The grid to the show the updated data
+                    _bindingSource.ResetBindings(false);
+                    dvgInventory.Refresh();
+
+
+                    ClearFields(); // Clear Input fields
+                    MessageBox.Show("product Updated"); // Says it updated
                 }
+                else
+                {
+                    MessageBox.Show("Product ID wasnt found");
+                }
+
             }
         }
     }
